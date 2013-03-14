@@ -1,0 +1,15 @@
+#!/bin/bash
+timeToHibernateIn=4h
+if [ -z "${1+xxx}" ]
+then
+sleep $timeToHibernateIn
+else
+sleep $1
+fi
+echo "System hibernating"
+pm-hibernate
+echo "command executed"
+
+
+ 
+
