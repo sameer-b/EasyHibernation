@@ -6,6 +6,7 @@
 #(time) can take 2m,3m etc for minutes
 #Usage 2: bash hibernate (this case it hibernates after 4hours, since my cellphone takes 4 hrs to charge)
 #you could change $timeToHibernate to anything you want with s,m,h suffix for seconds,minutes,hours respectibely.
+#NOTE: RUN THIS SCRIPT AS ROOT or else it will not work!!
 #!/bin/bash
 timeToHibernateIn=4h
 if [ -z "${1+xxx}" ]
