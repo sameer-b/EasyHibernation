@@ -1,12 +1,13 @@
+#If you want to install (execute it without the bash keyword and from any location) it then copy it to /usr/bin by executing sudo cp hibernate.bash /usr/bin
 #This a script that i use to hibernate my computer with delay.
-#This is under GPL v3 anyone is free to modify/contribute.
+#This is under General Public License version 3 anyone is free to modify/contribute.
 #Usage 1: bash hibernate (time)
 #(time) can take 1...9, will be taken as seconds/or you could do 2s as well.
 #(time) can take 1h,2h etc for hours
 #(time) can take 2m,3m etc for minutes
 #Usage 2: bash hibernate (this case it hibernates after 4hours, since my cellphone takes 4 hrs to charge)
 #you could change $timeToHibernate to anything you want with s,m,h suffix for seconds,minutes,hours respectively.
-#NOTE: RUN THIS SCRIPT AS ROOT or else it will not work!!
+#NOTE: RUN THIS SCRIPT AS ROOT or else it will not work (if its not in /usr/bin)!!
 #!/bin/bash
 timeToHibernateIn=4h
 if [ -z "${1+xxx}" ]
@@ -17,6 +18,7 @@ sleep $1
 fi
 echo "System hibernating"
 pm-hibernate
+echo "System Awake"
 
 
  
